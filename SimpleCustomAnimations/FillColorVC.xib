@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FillColorVC" customModule="SimpleCustomAnimations" customModuleProvider="target">
+            <connections>
+                <outlet property="animatedCircle" destination="dcD-6T-QrR" id="yHv-jO-ka4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcD-6T-QrR" customClass="AnimationFillColorView" customModule="SimpleCustomAnimations" customModuleProvider="target">
+                    <rect key="frame" x="87" y="248" width="240" height="240"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="4gh-Of-rfb"/>
+                        <constraint firstAttribute="width" constant="240" id="K48-A4-2WB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                            <color key="value" red="0.97254901959999995" green="0.69803921570000005" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYS-aX-Ecw">
+                    <rect key="frame" x="380" y="24" width="20" height="20"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="Odj-A1-G25"/>
+                        <constraint firstAttribute="height" constant="20" id="byr-jg-MEk"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="Cancel.png"/>
+                    <connections>
+                        <action selector="cancelButton" destination="-1" eventType="touchUpInside" id="om1-9P-bQr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dcD-6T-QrR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0qi-Wg-wYC"/>
+                <constraint firstItem="PYS-aX-Ecw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="IKb-wE-TUP"/>
+                <constraint firstAttribute="trailing" secondItem="PYS-aX-Ecw" secondAttribute="trailing" constant="14" id="XgN-nI-7xl"/>
+                <constraint firstItem="dcD-6T-QrR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zVx-B1-GxK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="601" y="176"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cancel.png" width="22" height="22"/>
+    </resources>
+</document>
